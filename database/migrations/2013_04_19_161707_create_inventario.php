@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class PermisosTable extends Migration
+class InventarioTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class PermisosTable extends Migration
      */
     public function up()
     {
-      Schema::create('Permisos', function (Blueprint $table) {
-            $table->id('per_id');
-            $table->string('per_tipo');
-
+        Schema::create('inventario', function (Blueprint $table) {
+            $table->id('inv_id');
+            $table->string('inv_descripcion');
+        });
     }
 
     /**
@@ -26,6 +26,6 @@ class PermisosTable extends Migration
      */
     public function down()
     {
-    Schema::dropIfExists('Permisos');
+        Schema::dropIfExists('inventario');
     }
 }
